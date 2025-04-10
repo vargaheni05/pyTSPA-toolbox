@@ -34,7 +34,7 @@ dependencies = [
 ]
 [project.urls]
 Homepage = "https://github.com/vargaheni05/pyTSPA-toolbox"
-Documentation = ""
+Documentation = "https://pyTSPA-toolbox.readthedocs.io/en/latest/"
 Repository = "https://github.com/vargaheni05/pyTSPA-toolbox.git"
 Issues = "https://github.com/vargaheni05/pyTSPA-toolbox/issues"
 [tool.setuptools]
