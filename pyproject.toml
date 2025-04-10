@@ -30,7 +30,7 @@ dependencies = [
 "matplotlib>=3.9.2",
 "seaborn>=0.13.2",
 "scipy>=1.14.1",
-"sklearn>=1.5.2"
+"scikit-learn>=1.5.2"
 ]
 [project.urls]
 Homepage = "https://github.com/vargaheni05/pyTSPA-toolbox"
