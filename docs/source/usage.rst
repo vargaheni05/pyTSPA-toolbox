@@ -4,27 +4,32 @@ Installation
 ------------
 
 **From PyPi**
-Install `pyTSPA` using pip
 
-.. code-block::
+Install `pyTSPA` using pip:
 
-pip install pyTSPA-toolbox
+.. code-block:: bash
+
+    pip install pyTSPA-toolbox
 
 **From source**
-Clone the git repository
-.. code-block::
 
-https://github.com/vargaheni05/pyTSPA-toolbox.git
+Clone the git repository:
 
-Change directory to the cloned repository
-.. code-block::
+.. code-block:: bash
 
-cd pyTSPA-toolbox
+    git clone https://github.com/vargaheni05/pyTSPA-toolbox.git
 
-Install with pip
-.. code-block::
+Change directory to the cloned repository:
 
-pip install .
+.. code-block:: bash
+
+    cd pyTSPA-toolbox
+
+Install with pip:
+
+.. code-block:: bash
+
+    pip install .
 
 For validating the installation, check the version of the toolbox:
 
