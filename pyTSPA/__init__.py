@@ -1,6 +1,6 @@
 from importlib.metadata import version, PackageNotFoundError
 
 try:
-    __version__ = version("example-package")
+    __version__ = version("pyTSPA_toolbox")
 except PackageNotFoundError:
-    __version__ = "0.0"
+    __version__ = "0.0.1"
