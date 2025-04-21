@@ -1,0 +1,45 @@
+Usage
+=====
+Installation
+------------
+
+**From PyPi**
+Install `pyTSPA` using pip
+
+.. code-block::
+
+pip install pyTSPA-toolbox
+
+**From source**
+Clone the git repository
+.. code-block::
+
+https://github.com/vargaheni05/pyTSPA-toolbox.git
+
+Change directory to the cloned repository
+.. code-block::
+
+cd pyTSPA-toolbox
+
+Install with pip
+.. code-block::
+
+pip install .
+
+For validating the installation, check the version of the toolbox:
+
+.. code-block:: python3
+
+    >>> import pyTSPA
+    >>> print(pyTSPA.__version__)
+    '0.0.1'
+
+Example
+-------
+The following code will load the specified match data file and display a basic profiling summary of the data.
+
+.. code-block:: python3
+
+    >>> import pyTSPA
+    >>> df = pyTSPA.load_match_data("example.csv")
+    >>> pyTSPA.data_profiling(df)
