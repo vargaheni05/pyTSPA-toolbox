@@ -1,7 +1,7 @@
 Welcome to pyTSPA's documentation!
 ============================
 
-A Toolbox for Analyzing and Visualizing Team Sports Performance. Including support for multiple data formats, segmentation based on envelope peak detection, and Markov model based methods, feature extraction, and statistics calculation. Including support for multiple data formats, match data segmentation, performance feature extraction, and statistical analysis.
+A Toolbox for Analyzing and Visualizing Team Sports Performance. Including support for multiple data formats, match data segmentation, performance feature extraction, and statistical analysis.
 
 Current version: 0.0.1
 
