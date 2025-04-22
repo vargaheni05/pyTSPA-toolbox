@@ -41,6 +41,6 @@ The documentation should be available in the `docs/build` directory as html file
 This includes the example codes as tutorials
 
 ## Correspondence
-Henrietta Varga (varga.henrietta.julianna@hallgato.ppke.hu)
-Marcell Szögi
+Henrietta Varga (varga.henrietta.julianna@hallgato.ppke.hu)<br>
+Marcell Szögi<br>
 Benedek Kardos
