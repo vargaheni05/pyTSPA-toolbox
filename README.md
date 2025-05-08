@@ -42,5 +42,5 @@ This includes the example codes as tutorials
 
 ## Correspondence
 Henrietta Varga (varga.henrietta.julianna@hallgato.ppke.hu)<br>
-Marcell Szögi<br>
-Benedek Kardos
+Marcell Szögi (szogi.marcell@hallgato.ppke.hu)<br>
+Benedek Kardos (kardos.benedek.zoltan@hallgato.ppke.hu)
