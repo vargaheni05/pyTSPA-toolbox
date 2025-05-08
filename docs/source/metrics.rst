@@ -14,4 +14,4 @@ All teams
 
 Statistics for all teams
 -------------------
-.. autofunction:: pyTSPA.metrics.each_team_statistics
+.. autofunction:: pyTSPA.metrics.each_team_performance
