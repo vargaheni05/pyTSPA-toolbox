@@ -1,26 +1,71 @@
 import numpy as np
 import pandas as pd
-def result_stats(df):
+
+def result_stats(df: pd.DataFrame) -> dict:
+
     """
-    Computes the number of home wins, draws, and away wins from full-time result column (FTR).
-    Assumes:
-        'H' = home win, 'D' = draw, 'A' = away win
+    Computes the number of home wins, draws, and away wins from the full-time result column ('FTR').
+
+    Args:
+        df (pd.DataFrame): DataFrame containing match data with a column 'FTR' indicating match outcomes.
+            - 'H' for Home Win
+            - 'D' for Draw
+            - 'A' for Away Win
+
+    Returns:
+        dict: a dictionary with the counts of each result type, structured as:
+            {
+                'Home Wins': int,
+                'Draws': int,
+                'Away Wins': int
+            }
+
+    Raises:
+        ValueError: if the 'FTR' column is not found in the DataFrame
     """
     if 'FTR' not in df.columns:
         raise ValueError("Column 'FTR' (full-time result) not found.")
 
     result_counts = df['FTR'].value_counts().to_dict()
-    return {
+    return{
         'Home Wins': result_counts.get('H', 0),
         'Draws': result_counts.get('D', 0),
         'Away Wins': result_counts.get('A', 0)
     }
 
-def team_performance(df, team_name):
+def team_performance(df: pd.DataFrame, team_name: str) -> dict:
+
     """
-    Summarizes a team's performance across the season.
-    Returns stats like matches played, wins, draws, losses, goals scored/conceded.
+    Computes a team's performance statistics across a season.
+
+    This function summarizes key performance metrics for a specified team, including the number of matches played, wins, draws, losses, goals scored, goals conceded, goal difference, and points.
+
+    Args:
+        df (pd.DataFrame): dataFrame containing match data with columns 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR'.
+        team_name (str): the name of the team for which the performance metrics will be calculated
+
+    Returns:
+        dict: a dictionary containing the team's performance metrics with the following structure:
+            {
+                'Team': str,
+                'Matches': int,
+                'Wins': int,
+                'Draws': int,
+                'Losses': int,
+                'Goals For': int,
+                'Goals Against': int,
+                'Goal Difference': int,
+                'Points': int
+            }
+
+    Raises:
+        ValueError: if any of the required columns ('HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR') are missing
     """
+    required_columns = ['HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR']
+    missing_columns = [col for col in required_columns if col not in df.columns]
+    if missing_columns:
+        raise ValueError(f"Missing required columns: {missing_columns}")
+    
     matches = df[(df['HomeTeam'] == team_name) | (df['AwayTeam'] == team_name)]
 
     wins = draws = losses = goals_for = goals_against = 0
@@ -54,84 +99,55 @@ def team_performance(df, team_name):
         'Points': 3 * wins + draws
     }
 
+def get_all_teams(df: pd.DataFrame) -> np.ndarray:
+    
+    """
+    Extracts a list of all unique team names from 'HomeTeam' and 'AwayTeam' columns.
 
-def get_all_teams(df):
+    This function aggregates unique team names from both the 'HomeTeam' and 'AwayTeam' columns to provide a comprehensive list of teams in the dataset.
+
+    Args:
+        df (pd.DataFrame): dataFrame containing match data with 'HomeTeam' and 'AwayTeam' columns
+
+    Returns:
+        np.ndarray: a sorted array of unique team names
+
+    Raises:
+        ValueError: if either 'HomeTeam' or 'AwayTeam' columns are missing
     """
-    Returns a list of all unique team names from 'HomeTeam' and 'AwayTeam' columns.
-    """
+
+    required_columns = ['HomeTeam', 'AwayTeam']
+    missing_columns = [col for col in required_columns if col not in df.columns]
+    if missing_columns:
+        raise ValueError(f"Missing required columns: {missing_columns}")
+    
     home_teams = df['HomeTeam'].astype(str).unique()
     away_teams = df['AwayTeam'].astype(str).unique()
     all_teams = np.union1d(home_teams, away_teams)
     return all_teams
 
-def each_team_performance(df):
+def each_team_performance(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Summarizes performance for every team in the dataset using summarize_team_performance().
-    Returns a DataFrame where each row is a team's statistics.
+    Computes performance statistics for every team in the dataset.
+
+    This function calculates the performance metrics for each team using the `team_performance()` function and returns a DataFrame summarizing each team's performance.
+
+    Args:
+        df (pd.DataFrame): dataFrame containing match data with 'HomeTeam', 'AwayTeam', 'FTHG', 'FTAG', 'FTR' columns
+
+    Returns:
+        pd.DataFrame: a DataFrame where each row represents a team's performance summary, sorted by points in descending order
+        Columns include:
+            - 'Team': Team name
+            - 'Matches': Matches played
+            - 'Wins': Wins
+            - 'Draws': Draws
+            - 'Losses': Losses
+            - 'Goals For': Goals scored
+            - 'Goals Against': Goals conceded
+            - 'Goal Difference': Goal difference
+            - 'Points': Points accumulated
     """
     teams = get_all_teams(df)
     summaries = [team_performance(df, team) for team in teams]
     return pd.DataFrame(summaries).sort_values(by='Points', ascending=False).reset_index(drop=True)
-
-
-
-
-#from this point the plotting is implementeed
-import seaborn as sns
-import matplotlib.pyplot as plt
-
-def plot_result_distribution(df):
-    """
-    Visualizes overall result distribution: Home Wins, Draws, Away Wins.
-    """
-    results = result_stats(df)
-    result_names = list(results.keys())
-    result_counts = list(results.values())
-
-    sns.set(style="whitegrid")
-    plt.figure(figsize=(8, 5))
-    sns.barplot(x=result_names, y=result_counts, palette="muted")
-    plt.title("Match Result Distribution")
-    plt.ylabel("Number of Matches")
-    plt.xlabel("Result")
-    plt.tight_layout()
-    plt.show()
-
-
-def plot_team_results(df, team_name):
-    """
-    Plots wins, draws, and losses for a single team.
-    """
-    stats = team_performance(df, team_name)
-    results = {
-        'Wins': stats['Wins'],
-        'Draws': stats['Draws'],
-        'Losses': stats['Losses']
-    }
-
-    sns.set(style="whitegrid")
-    plt.figure(figsize=(8, 5))
-    sns.barplot(x=list(results.keys()), y=list(results.values()), palette="deep")
-    plt.title(f"{team_name} - Match Outcomes")
-    plt.ylabel("Number of Matches")
-    plt.xlabel("Result Type")
-    plt.tight_layout()
-    plt.show()
-
-def plot_league_points_table(df):
-    """
-    Plots total points for all teams as a horizontal bar chart.
-    Assumes df is the output of `each_team_performance()`.
-    """
-    sns.set(style="whitegrid")
-    plt.figure(figsize=(10, 12))
-    sorted_df = df.sort_values(by="Points", ascending=True)
-
-    sns.barplot(x="Points", y="Team", data=sorted_df, palette="viridis")
-    plt.title("League Table - Points by Team")
-    plt.xlabel("Points")
-    plt.ylabel("Team")
-    plt.tight_layout()
-    plt.show()
-
-
