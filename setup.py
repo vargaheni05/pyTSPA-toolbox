@@ -11,7 +11,7 @@ with open("requirements.txt", "r", encoding="utf-8") as f:
 # !TODO: Change these settings
 setup(
     name="TSPA-toolbox", # Name of the package
-    version="0.0",
+    version="0.1.0",
     description="Toolbox for Analyzing and Visualizing Team Sports Performance",
     author="Kardos Bendek, Szögi Marcell, Varga Henrietta",
     author_email="varga.henrietta.julianna@hallgato.ppke.hu",
@@ -20,7 +20,7 @@ setup(
     url="https://github.com/vargaheni05/pyTSPA-toolbox",
     project_urls={"Bug Tracker": "https://github.com/vargaheni05/pyTSPA-toolbox/issues",},
     classifiers=[
-        "Development Status :: 1 - Planning",
+        "Development Status :: 3 - Alpha",
         "Programming Language :: Python :: 3.10",
         "Operating System :: OS Independent",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
