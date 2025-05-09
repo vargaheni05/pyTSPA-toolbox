@@ -20,6 +20,12 @@ The toolbox is divided into the following modules:
 - **Metrics:** Calculation of match and team statistics (Win Percentage, Pythagorean Expectation) and predictive models using logistic regression.
 - **Visualization:** Graphical representation of match data, statistical summaries, and prediction results using bar charts, scatter plots, and pie charts.
 
+Datasets
+--------
+The datasets used for testing and demonstration purposes are primarily sourced from public football datasets.  
+For a comprehensive collection of football datasets, visit:  
+https://www.football-data.co.uk/data.php
+
 Installation
 ------------
 pip project: https://pypi.org/project/pyTSPA-toolbox/
