@@ -3,7 +3,7 @@ Welcome to pyTSPA's documentation!
 
 A Toolbox for Analyzing and Visualizing Team Sports Performance. Including support for multiple data formats, match data segmentation, performance feature extraction, and statistical analysis.
 
-Current version: 0.0.2
+Current version: 0.0.3
 
 Planned release: May 2025
 
