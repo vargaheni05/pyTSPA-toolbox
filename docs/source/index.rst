@@ -4,7 +4,7 @@ Welcome to pyTSPA's documentation!
 A Toolbox for Analyzing and Visualizing Team Sports Performance, with a particular focus on Football Match Data.
 The toolbox includes modules for data processing, statistical analysis, match outcome prediction, and result visualization.
 
-Current version: 0.1.0
+Current version: 0.1.1
 
 Planned release: May 2025
 
