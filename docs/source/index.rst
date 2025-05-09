@@ -74,6 +74,8 @@ https://pytspa-toolbox.readthedocs.io/en/latest/
    :caption: Tutorials:
    :maxdepth: 1
 
+   pyTSPA_example
+
 Correspondence
 --------------
 Henrietta Varga PPCU-ITK, Budapest, Hungary
