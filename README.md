@@ -1,5 +1,40 @@
-# pyTSPA-toolbox
-A Toolbox for Analyzing and Visualizing Team Sports Performance. Including support for multiple data formats, match data segmentation, performance feature extraction, and statistical analysis.
+# pyTSPA - Toolbox for Analyzing and Visualizing Team Sports Performance  
+
+A toolbox for analyzing and visualizing team sports performance, with a particular focus on **football match data**.  
+The toolbox includes modules for data processing, statistical analysis, match outcome prediction, and result visualization.
+
+---
+
+### Current Version: `0.1.0`  
+### Planned Release: May 2025  
+
+---
+
+## Introduction  
+
+`pyTSPA` was developed to support coaches, analysts, and sports scientists in extracting actionable insights from football match data.  
+Designed with a **football-centric approach**, the toolbox facilitates data handling, statistical analysis, match outcome prediction using machine learning, and comprehensive data visualization.
+
+---
+
+## Description  
+
+The toolbox is divided into the following modules:
+
+- **Data Handling:**  
+  - Data input/output, cleaning, and profiling (CSV, Excel).
+
+- **Metrics:**  
+  - Calculation of match and team statistics (`Win Percentage`, `Pythagorean Expectation`)  
+  - Predictive models using **logistic regression** for match outcome prediction.
+
+- **Visualization:**  
+  - Graphical representation of match data, statistical summaries, and prediction results using bar charts, scatter plots, and pie charts.
+
+---
+
+**For more information, visit the [official documentation](https://pytspa-toolbox.readthedocs.io/en/latest/)**.
+
 
 ## Installation
 ### From PyPi
