@@ -23,6 +23,7 @@ The toolbox is divided into the following modules:
 Installation
 ------------
 pip project: https://pypi.org/project/pyTSPA-toolbox/
+
 git repository: https://github.com/vargaheni05/pyTSPA-toolbox
 
 For comprehensive installation instructions and usage guidelines, please refer to the documentation:  
