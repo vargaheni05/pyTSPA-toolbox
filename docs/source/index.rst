@@ -14,6 +14,11 @@ pyTSPA was developed to support coaches, analysts, and sports scientists in extr
 
 Description
 -----------
+
+.. image:: _static/abstract.png
+   :width: 80%
+   :align: center
+
 The toolbox is divided into the following modules:
 
 - **Data Handling:** Data input/output, cleaning, and profiling (CSV, Excel).
