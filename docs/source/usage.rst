@@ -37,7 +37,7 @@ For validating the installation, check the version of the toolbox:
 
     >>> import pyTSPA
     >>> print(pyTSPA.__version__)
-    '0.0.1'
+    '0.1.1'
 
 Example
 -------
@@ -47,4 +47,4 @@ The following code will load the specified match data file and display a basic p
 
     >>> import pyTSPA
     >>> df = pyTSPA.load_match_data("example.csv")
-    >>> pyTSPA.data_profiling(df)
+    >>> print(pyTSPA.data_profiling(df))
