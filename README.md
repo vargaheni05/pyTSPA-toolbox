@@ -5,7 +5,7 @@ The toolbox includes modules for data processing, statistical analysis, match ou
 
 ---
 
-### Current Version: `0.1.0`  
+### Current Version: `0.1.1`  
 ### Planned Release: May 2025  
 
 ---
