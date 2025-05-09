@@ -19,7 +19,7 @@ def plot_result_distribution(df: pd.DataFrame):
     result_counts = list(results.values())
 
     plt.figure(figsize=(8, 5))
-    sns.barplot(x=result_names, y=result_counts, palette="muted")
+    sns.barplot(x=result_names, y=result_counts, hue=result_names, palette="muted", legend=False)
     plt.title("Match Result Distribution")
     plt.ylabel("Number of Matches")
     plt.xlabel("Result")
