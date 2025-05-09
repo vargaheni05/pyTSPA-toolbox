@@ -9,6 +9,7 @@ For an interactive demonstration of the pyTSPA toolbox, visit the Colab notebook
 .. raw:: html
 
    <a href="https://colab.research.google.com/drive/1fKSwwWb85Zb0z_N65EPa_3mWJwH6juC4?usp=sharing#scrollTo=1aQrAPRPJRuW">Colab Notebook</a>
+---------------------------
 
 Data Handling
 -------------
