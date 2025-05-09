@@ -9,8 +9,7 @@ For an interactive demonstration of the pyTSPA toolbox, visit the Colab notebook
 .. raw:: html
 
    <a href="https://colab.research.google.com/drive/1fKSwwWb85Zb0z_N65EPa_3mWJwH6juC4?usp=sharing#scrollTo=1aQrAPRPJRuW">Colab Notebook</a>
-
----
+---------------------------
 
 Data Handling
 -------------
@@ -36,8 +35,6 @@ These functions are designed to efficiently process raw match data, ensuring it 
     # Data profiling
     data_profiling(df_cleaned)
 
----
-
 Metrics Calculation
 -------------------
 The `metrics.py` module is the core of the toolbox, providing statistical analysis and prediction capabilities.  
@@ -47,8 +44,11 @@ In addition to basic metrics like **Win Percentage** and **Goal Difference**, th
 The logistic regression model predicts match outcomes (Home Win, Draw, Away Win) based on calculated metrics such as the **Pythagorean Expectation**.  
 
 **Steps:**  
-1. Calculate match and team-level statistics.  
+
+1. Calculate match and team-level statistics.
+
 2. Predict match outcomes using logistic regression.  
+
 3. Generate a second-half prediction based on the first-half performance.  
 
 .. code-block:: python
@@ -86,17 +86,19 @@ The predicted outcomes can be further visualized to compare the model's effectiv
     second_half_predictions = season_half_prediction(df_cleaned)
     print("Second Half Predictions:", second_half_predictions.head())
 
----
-
 Visualization
 -------------
 The `visualization.py` module is used to create plots for visualizing the calculated metrics and prediction results.  
 These visualizations help identify patterns and trends, making the data analysis more intuitive.  
 
-**Steps:**  
-1. Visualize the overall result distribution.  
+**Steps:**
+
+1. Visualize the overall result distribution. 
+
 2. Plot team-specific match outcomes.  
+
 3. Generate a league points table.  
+
 4. Visualize the Pythagorean Expectation and compare it with actual points.  
 
 .. code-block:: python
@@ -120,7 +122,6 @@ These visualizations help identify patterns and trends, making the data analysis
 **Explanation:**  
 The visualizations are created using **Seaborn** and **Matplotlib**, focusing on clarity and accuracy.  
 The league table plot helps visualize the points distribution, while the Pythagorean Expectation plot compares expected and actual points.
----
 
 This example guide provides an overview of the main functionalities in the pyTSPA toolbox, covering data handling, metrics calculation, and visualization.  
 For a more comprehensive and interactive walkthrough, refer to the Colab notebook linked above.
