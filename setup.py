@@ -11,7 +11,7 @@ with open("requirements.txt", "r", encoding="utf-8") as f:
 # !TODO: Change these settings
 setup(
     name="TSPA-toolbox", # Name of the package
-    version="0.1.0",
+    version="0.1.1",
     description="Toolbox for Analyzing and Visualizing Team Sports Performance",
     author="Kardos Bendek, Szögi Marcell, Varga Henrietta",
     author_email="varga.henrietta.julianna@hallgato.ppke.hu",

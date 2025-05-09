@@ -3,7 +3,7 @@ from importlib.metadata import version, PackageNotFoundError
 try:
     __version__ = version("pyTSPA_toolbox")
 except PackageNotFoundError:
-    __version__ = "0.0.3"
+    __version__ = "0.1.1"
 
 from .data import load_match_data, clean_data, data_profiling
 from .metrics import result_stats, team_performance, get_all_teams, each_team_performance, win_percentage, each_win_percentage, pythagorean_expectation, each_pythagorean_expectation, logistic_regression_prediction, predict_match_outcome, season_half_prediction
