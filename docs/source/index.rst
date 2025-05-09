@@ -23,7 +23,8 @@ The toolbox is divided into the following modules:
 Datasets
 --------
 The datasets used for testing and demonstration purposes are primarily sourced from public football datasets.  
-For a comprehensive collection of football datasets, visit:  
+For a comprehensive collection of football datasets, visit:
+
 https://www.football-data.co.uk/data.php
 
 Installation
