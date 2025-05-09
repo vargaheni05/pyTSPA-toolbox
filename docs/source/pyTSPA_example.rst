@@ -17,8 +17,11 @@ The `data.py` module provides functions for loading, cleaning, and profiling mat
 These functions are designed to efficiently process raw match data, ensuring it is clean and well-structured for further analysis.  
 
 **Steps:**  
+
 1. Load the raw data from CSV or Excel.  
+
 2. Clean the data, including handling missing values.  
+
 3. Profile the data to understand its structure and basic statistics.  
 
 .. code-block:: python
