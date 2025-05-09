@@ -15,7 +15,7 @@ pyTSPA was developed to support coaches, analysts, and sports scientists in extr
 Description
 -----------
 
-.. image:: abstract.png
+.. image:: abstract2.png
    :width: 80%
    :align: center
 
