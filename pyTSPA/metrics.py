@@ -305,7 +305,7 @@ def logistic_regression_prediction(df: pd.DataFrame) -> dict:
     X_train, X_test, y_train, y_test = train_test_split(X_resampled, y_resampled, test_size=0.3, random_state=42)
 
     # Multinomial Logistic Regression model with regularization
-    model = LogisticRegression(multi_class='multinomial', solver='lbfgs', max_iter=1000, C=1.0)
+    model = LogisticRegression(solver='lbfgs', max_iter=1000, C=1.0)
     model.fit(X_train, y_train)
 
     # Predictions and evaluation
